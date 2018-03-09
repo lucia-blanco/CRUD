@@ -1,2 +1,2 @@
-# CRUD
-CRUD con JSP Y BBDD para las asignaturas de Programación y Bases de Datos
+# :seedling: CRUD HUERTO 
+CRUD para organizar un huerto: plantas por tipos, fechas de siembra y recogida...
