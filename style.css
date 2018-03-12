@@ -1,0 +1,59 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+#fondo-principal{
+	background-image: url(img/comenzar.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+#footer{
+	position: fixed;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+}
+#wrapper-login {
+	position: relative;
+	width: 40%;
+}
+#titulo{
+	font-size: 10em;
+	margin-top: 10%;
+	font-family: 'Grand Hotel', cursive;
+	color: #3a4d47;
+	margin-bottom: 0px;
+}
+#formulario input{
+	width: 70%;
+	margin: 20px auto;
+}
+#button{
+	background-color: #b5bd94;
+	color: #FFF;
+}
+#registro{
+	color: #3a4d47;
+	font-size: 1em;
+}
+#registro:hover{
+	color: #3a4d47;
+}
+.error{
+	display: none;
+}
+#wrapper-reg{
+	width: 50%;
+}
+#registrate{
+	margin-top: 10%;
+	font-family: 'Grand Hotel', cursive;
+	color: #3a4d47;
+	margin-bottom: 0px;
+	font-size: 5em;
+}
+#despliegue{
+	width: 70%;
+	margin: 20px auto;
+}
