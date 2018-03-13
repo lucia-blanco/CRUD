@@ -10,12 +10,19 @@
 	<link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Montserrat" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Planticas</title>
+	<script type="text/javascript" src="registro.js"></script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body id="fondo-principal" class="text-center">
 	<div id="wrapper-login" class="cover-container d-flex h-100 p-3 mx-auto flex-column text-center">
 		<main role="main" class="inner cover">
-			<form action="" method="get" accept-charset="utf-8" onsubmit="return validacion()" id="formulario" class="form-signin">
+			<form action="home.html" method="get" accept-charset="utf-8" onsubmit="return validar()" id="formulario" class="form-signin">
 				<h1 id="titulo" class="h1 mb-2 cover-heading" style="margin-bottom: 0px;">Planticas</h1>
 				<h5 class="h5 mb-3 font-weight-normal lead">La web para plantar cosicas</h5>
 				<div class="alert-danger error" role="alert">Correo electrónico o contraseña inválidos</div>
@@ -31,11 +38,5 @@
 			<small class="footer-copyright py-3 text-center"> © 2018 Copyright</small>
 		</footer>
 	</div>
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<!-- Popper JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@
 <body id="fondo-principal">
   <div id="wrapper-reg" class="cover-container d-flex h-100 p-3 mx-auto flex-column text-center">
     <main>
-      <form action="" method="get" accept-charset="utf-8" id="formulario" class="text-center" onsubmit="return validacion()">
+      <form action="" method="get" accept-charset="utf-8" id="formulario" class="text-center" onsubmit="return validarReg()">
         <h1 id="registrate">Regístrate</h1>
         <div class="form-row form-group">
           <div class="col">
@@ -42,26 +42,29 @@
 
         <div class="form-row form-group">
           <div class="col md-6">
-            <input class="form-control" type="email" id="mail" name="mail" value="" placeholder="Correo electrónico" onchange="quitarError('mail', 'errorMail')"">
+            <input class="form-control" type="email" id="mail" name="mail" value="" placeholder="Correo electrónico" onchange="quitarError('mail', 'errorMail')">
             <span id="errorMail" class="error"> No es un email válido</span>
           </div>
               
           <div class="col md-6">
-            <select id="despliegue" class="form-control">
-              <option>Almería</option>
-              <option>Cádiz</option>
-              <option>Córdoba</option>
-              <option>Granada</option>
-              <option>Huelva</option>
-              <option>Jaén</option>
-              <option>Málaga</option>
-              <option>Sevilla</option>
+            <select id="provincia" class="form-control" onchange="quitarError('provincia', 'errorProvincia')"">
+              <option value="0">...</option>
+              <option value="1">Almería</option>
+              <option value="2">Cádiz</option>
+              <option value="3">Córdoba</option>
+              <option value="4">Granada</option>
+              <option value="5">Huelva</option>
+              <option value="6">Jaén</option>
+              <option value="7">Málaga</option>
+              <option value="8">Sevilla</option>
             </select>
+            <span id="errorProvincia" class="error"> Por favor, selecciona una provincia</span>
           </div>
         </div>
         <div id="envio">
           <input id="button" class="btn btn-lg btn-basic btn-block" type="submit" name="button" value="Enviar">
         </div>
+        <a id="atras" class="mt-5 mb-3 text-muted atras" href="index.html">Sign in</a>
       </form>
     </main>
     <footer id="footer" class="page-footer font-small pt-4 mt-4">
@@ -69,5 +72,5 @@
     </footer>
   </div>
 </body>
-<script type="text/javascript" src="js/registro.js"></script>
+<script type="text/javascript" src="registro.js"></script>
 </html>

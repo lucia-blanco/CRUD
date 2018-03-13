@@ -20,18 +20,19 @@ body{
 }
 #titulo{
 	font-size: 10em;
-	margin-top: 10%;
+	margin-top: 15%;
 	font-family: 'Grand Hotel', cursive;
 	color: #3a4d47;
 	margin-bottom: 0px;
 }
 #formulario input{
-	width: 70%;
 	margin: 20px auto;
 }
 #button{
 	background-color: #b5bd94;
 	color: #FFF;
+	width: 30%;
+	border-color: #b5bd94;
 }
 #registro{
 	color: #3a4d47;
@@ -42,18 +43,49 @@ body{
 }
 .error{
 	display: none;
+	color: #F00;
+	font-size: xx-small;
+	line-height: 2px;
 }
 #wrapper-reg{
 	width: 50%;
 }
 #registrate{
-	margin-top: 10%;
+	margin-top: 20%;
 	font-family: 'Grand Hotel', cursive;
 	color: #3a4d47;
 	margin-bottom: 0px;
 	font-size: 5em;
 }
-#despliegue{
-	width: 70%;
+#provincia{
+	width: 90%;
 	margin: 20px auto;
+}
+#atras{
+	font-size: small;
+	margin: 150px;
+}
+.navbar{
+	background-color: #3a4d47;
+}
+#logo-navbar{
+	font-family: 'Grand Hotel', cursive;
+	color: #FFF;
+	font-size: 2em; 
+}
+#logo-navbar:hover, #logo-navbar:visited{
+	text-decoration: none;
+	color: #FFF;
+}
+#bienvenida{
+	color: #3a4d47;
+	padding-top: 3.5rem;
+}
+.img-huerto{
+	height: 12rem;
+	width: 18rem;
+	display: block;
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
