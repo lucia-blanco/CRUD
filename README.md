@@ -2,8 +2,13 @@
 CRUD para organizar un huerto.
 Cada usuario podrá gestionar su huerto y añadir nuevos cultivos.  
 - [x] Creación del repositorio
+<<<<<<< HEAD
 - [x] Diseño de la BBDD
 - [x] Creación de la BBDD
+=======
+- [ ] Diseño de la BBDD
+- [ ] Creación de la BBDD
+>>>>>>> 40a0dcf37609542ff10be0c71cc66ebadf28cd11
 - [x] Front-end Login y Registro
 - [x] Front-end Home
 - [ ] Front-end Huerto
