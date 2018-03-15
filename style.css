@@ -88,4 +88,30 @@ body{
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	background-image: url(img/default_huerto.jpg);
+}
+#buscador{
+	background-color: #b5bd94;
+	height: 30%;
+}
+
+#sembrado{
+	/*background-color: #b5bd94;*/
+	border: 2px solid #b5bd94;
+  border-radius: 5px;
+	float: right;
+}
+.eliminar{
+	color: #F00;
+}
+.eliminar:hover{
+	color: #F00;
+}
+#buscador input {
+	margin-right: 20px;
+	width: 50%;
+	padding: 5px;
+}
+thead{
+	color: #3a4d47;
 }
