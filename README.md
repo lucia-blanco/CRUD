@@ -10,7 +10,7 @@ Cada usuario podrá gestionar su huerto y añadir nuevos cultivos.
 - [x] Front-end Cultivos
 - [x] Front-end Nuevo Huerto
 - [x] Back-end Login y Registro
-- [ ] Back-end Huerto
-- [ ] Back-end Cultivos
+- [x] Back-end Huerto
+- [x] Back-end Cultivos
 - [x] Back-end Nuevo Huerto
 
