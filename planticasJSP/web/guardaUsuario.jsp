@@ -26,31 +26,33 @@
 
       request.setCharacterEncoding("UTF-8");
       
-      // Comprueba la existencia del mail de usuario introducido
-      String consultaMail = "SELECT * FROM usuario WHERE email='" + request.getParameter("mail") + "'";   
-      String id = request.getParameter("idUsuario");   
-      ResultSet existe = s.executeQuery (consultaMail);
-      existe.last();
+      // Comprueba la existencia del mail y alias introducidos
+      String consultaAlias = "SELECT * FROM usuario WHERE alias='"+ request.getParameter("alias") + "'";      
       
-      if (existe.getRow() != 0) {
-        response.sendRedirect("registro.jsp?q=cambia");
-      } else { 
+      ResultSet existeAlias = s.executeQuery (consultaAlias);
+      existeAlias.last();
+
+      if (existeAlias.getRow() != 0) {
+         response.sendRedirect("registro.jsp?a=cambia");
+      } else {
+        String consultaMail = "SELECT * FROM usuario WHERE email='"+ request.getParameter("mail") + "'";      
+        
+        ResultSet existeMail = s.executeQuery (consultaMail);
+        existeMail.last();
+
+        if (existeMail.getRow() != 0) {
+         response.sendRedirect("registro.jsp?m=cambia");
+        } else { 
         String insercion = "INSERT INTO usuario (alias, passw, email) VALUES ("
           
           + " '" + request.getParameter("alias")
           + "', '" + request.getParameter("password")
           + "', '" + request.getParameter("mail") + "')";
         s.execute(insercion);
-        response.sendRedirect("home.jsp?id=<%=id%>");
+        response.sendRedirect("home.jsp?alias=" + request.getParameter("alias"));
+      }
       }
       conexion.close();
     %>
-        <form action="index.jsp" method="GET">
-            <div id="boton">
-            <input id="button" type="submit" name="button" value="Volver">
-            </div>
-        </form>
-
-    
   </body>
 </html>
