@@ -45,21 +45,6 @@
             <input class="form-control" type="email" id="mail" name="mail" value="" placeholder="Correo electrónico" onchange="quitarError('mail', 'errorMail')">
             <span id="errorMail" class="error"> No es un email válido</span>
           </div>
-              
-          <div class="col md-6">
-            <select id="provincia" class="form-control" onchange="quitarError('provincia', 'errorProvincia')"">
-              <option value="0">...</option>
-              <option value="1">Almería</option>
-              <option value="2">Cádiz</option>
-              <option value="3">Córdoba</option>
-              <option value="4">Granada</option>
-              <option value="5">Huelva</option>
-              <option value="6">Jaén</option>
-              <option value="7">Málaga</option>
-              <option value="8">Sevilla</option>
-            </select>
-            <span id="errorProvincia" class="error"> Por favor, selecciona una provincia</span>
-          </div>
         </div>
         <div id="envio">
           <input id="button" class="btn btn-lg btn-basic btn-block" type="submit" name="button" value="Enviar">
