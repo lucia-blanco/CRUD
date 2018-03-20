@@ -60,8 +60,8 @@
 			      <tr>
 			        <th>Nombre común</th>
 			        <th>Tipo</th>
-			        <th>Fecha Inicio Siembra</th>
-			        <th>Fecha Fin Siembra</th>
+			        <th>Mes Inicio Siembra</th>
+			        <th>Mes Fin Siembra</th>
 			        <th>Añadir</th>
 			      </tr>
 			    </thead>

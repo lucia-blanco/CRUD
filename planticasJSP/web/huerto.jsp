@@ -40,8 +40,8 @@
   
 	<main role="main">
 		<div class="jumbotron mb-5">
-			<div class="container">
-        <h3 id="bienvenida" class="display-4">Huerto</h3>
+			<div class="container" style="padding-top: 3.5rem;">
+        <a id="modHuerto" href="modificaHuerto.jsp?alias=<%= username%>&idHuerto=<%= Integer.parseInt(request.getParameter("idHuerto"))%>" class="display-4 h3">Huerto</a>
 				<p>Aquí puedes ver todo lo que tienes plantado en el huerto, así como la fecha aproximada de cosecha.</p>
 				<p>También puedes dejarte inspirar por la lista de cultivos y sembrar algo nuevo.</p>
 				<a href="cultivo.jsp?alias=<%= username%>&idHuerto=<%= Integer.parseInt(request.getParameter("idHuerto"))%>" id="button" class="btn" style="width: 15%;">Nuevo Cultivo</a>
@@ -82,8 +82,8 @@
 		        <th>Nombre común</th>
 		        <th>Tipo</th>
 		        <th>Fecha Siembra</th>
-		        <th>Fecha Cosecha</th>
-		        <th>Añadir</th>
+		        <!-- <th>Fecha Cosecha</th> -->
+		        <th>Eliminar</th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -100,7 +100,7 @@
 		        <td><%= cultivos.getString("nomComun")%></td>
 		        <td><%= cultivos.getString("tipo")%></td>
             <td><%= cultivos.getString("fechaSiembra")%></td>
-            <td><%= idSiembra%></td>
+            <!-- <td><%= idSiembra%></td> -->
 		        <td>
               <a class="btn btn-danger" href="eliminarSiembra.jsp?idHuerto=<%= id%>&idSiembra=<%= cultivos.getInt("idSiembra")%>&alias=<%= username%>">Eliminar</a>
 		        </td>

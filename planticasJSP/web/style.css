@@ -94,6 +94,14 @@ body{
 	background-repeat: no-repeat;
 	background-image: url(img/default_huerto.jpg);
 }
+#modHuerto{
+	color: #3a4d47;
+}
+#modHuerto:hover{
+	color: #3a4d47;
+	text-decoration: none;
+	transform: scale(1.2);
+}
 #buscador{
 	background-color: #b5bd94;
 	height: 30%;
