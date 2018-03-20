@@ -53,7 +53,7 @@
      <div class="jumbotron mb-5">
       <div class="container">
         <h3 id="bienvenida" class="display-4"><%=hu.getString("nomHuerto")%></h3>
-        <p>Qué bien que te decidiste a tener un huerto nuevo</p>
+        <p>Aquí puedes hacer pequeños cambios sobre el huerto</p>
       </div>
     </div>
     <div class="container mt-6">
