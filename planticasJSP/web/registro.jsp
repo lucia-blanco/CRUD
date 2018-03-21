@@ -48,20 +48,20 @@
           <h1 id="registrate">Regístrate</h1>
           <div class="form-row form-group">
             <div class="col">
-              <input class="form-control" type="text" id="alias" name="alias" value="" placeholder="Nombre de usuario" onchange="quitarError('alias', 'errorUsername')"">
-              <!-- <span id="errorUsername" class="error"> No es un nombre de usuario válido</span> -->
+              <input class="form-control" type="text" id="alias" name="alias" value="" required placeholder="Nombre de usuario" onchange="quitarError('alias', 'errorUsername')"">
+              <span id="errorUsername" class="error"> No es un nombre de usuario válido</span>
             </div>
 
             <div class="col">
-              <input class="form-control" type="password" id="password" name="password" value="" placeholder="Contraseña" onchange="quitarError('password', 'errorPassword')">
+              <input class="form-control" type="password" id="password" name="password" value="" required placeholder="Contraseña" onchange="quitarError('password', 'errorPassword')">
               <!-- <span id="errorPassword" class="error"> La contraseña debe tener al menos 4 caracteres y contener mayúscula, minúscula, un dígito y carácter no alfanumérico -().+*_</span> -->
             </div>
           </div>
 
           <div class="form-row form-group">
             <div class="col md-6">
-              <input class="form-control" type="email" id="mail" name="mail" value="" placeholder="Correo electrónico" onchange="quitarError('mail', 'errorMail')">
-              <!-- <span id="errorMail" class="error"> No es un email válido</span> -->
+              <input class="form-control" type="email" id="mail" name="mail" value="" required placeholder="Correo electrónico" onchange="quitarError('mail', 'errorMail')">
+              <span id="errorMail" class="error"> No es un email válido</span>
             </div>
           </div>
           <div id="envio">
@@ -75,6 +75,7 @@
       </footer>
     </div>
   </body>
+  <script src="registro.js"></script>
   <script type="text/javascript">
     window.onload = function alert() {
       //mostrar = request.getParameter("q");

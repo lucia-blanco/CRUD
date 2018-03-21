@@ -46,16 +46,16 @@
 				<a href="huerto.jsp?alias=<%= username%>&idHuerto=<%= Integer.parseInt(request.getParameter("idHuerto"))%>" id="button" class="btn" style="width: 15%;">Volver al huerto</a>
 			</div>
 		</div>
-		<!-- <div class="container-fluid">
+		<div class="container-fluid">
 			<div id="buscador" class="container col-10 mx-sm-5 p-4 rounded-top">
 				<form class="form-inline mt-2 mt-md-0">
-					<input type="text" name="buscar" placeholder="Buscar">
+					<input id="searchText" type="text" name="buscar" placeholder="Buscar" onkeyup='doSearch()'>
 					<button class="btn my-2 my-sm-0" style="color: #3a4d47; background-color: #FFF">Buscar</button>
 				</form>
-				</div>
-			</div> -->
+			</div>
+		</div>
 			<div class="container col-10 mx-sm-5">
-				<table class="table table-striped">
+				<table id="tabla" class="table table-striped">
 			    <thead>
 			      <tr>
 			        <th>Nombre común</th>
@@ -73,6 +73,7 @@
               Statement s2 = conexion2.createStatement();
               ResultSet cultivos = s2.executeQuery("SELECT * FROM cultivo");
               while (cultivos.next()) {
+                
             %>
 			      <tr>
 			        <td><%= cultivos.getString("nomComun")%></td>
@@ -91,4 +92,5 @@
 		</div>
 	</main>
 </body>
+<script src="buscador.js"></script>
 </html>

@@ -44,14 +44,7 @@ function validarReg(){
     document.getElementById("username").style.color = "#000";
     document.getElementById("errorUsername").style.display = "none";
   }
-  //validacion provincia
-	var provincia=document.getElementById("provincia")
-	if(provincia.value==0){
-		document.getElementById("provincia").style.borderColor="#F00"
-		document.getElementById("errorProvincia").style.display = "inline";
-		correcto=false;
-	}
-	return correcto;
+  
 }
 
 function quitarError(dato, mensaje){

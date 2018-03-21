@@ -75,8 +75,15 @@
 			</div>
 		</div>
 		<div class="container-fluid text-center">
-			<div id="sembrado" class="col-11 mx-sm-5 mb-5 text-center">
-				<table class="table table-striped">
+      <div id="buscador" class="container col-11 mx-sm-5 p-4 rounded-top">
+        <form class="form-inline mt-2 mt-md-0">
+          <input id="searchText" type="text" name="buscar" placeholder="Buscar" onkeyup='doSearch()'>
+          <button class="btn my-2 my-sm-0" style="color: #3a4d47; background-color: #FFF">Buscar</button>
+        </form>
+      </div>
+    </div>
+			<div class="col-11 mx-sm-5 mb-5 text-center">
+				<table id="tabla" class="table table-striped">
 		    <thead>
 		      <tr>
 		        <th>Nombre común</th>
@@ -115,4 +122,5 @@
 		</div>
 	</main>
 </body>
+<script src="buscador.js"></script>
 </html>
