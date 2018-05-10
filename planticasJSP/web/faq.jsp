@@ -37,50 +37,25 @@
   %>
 	<nav class="navbar navbar-expand-md fixed-top">
             <a href="home.jsp?alias=<%=username%>" id="logo-navbar">Planticas</a>
-            <a href="faq.jsp?alias=<%=username%>" id="salir" class="col-10 d-flex justify-content-end">FaQ</a>
+            <a href="faq.jsp" id="salir" class="col-10 d-flex justify-content-end">FaQ</a>
             <a href="index.jsp" id="salir" class="col-1 d-flex justify-content-end">Sign out</a>
 	</nav>
-	<main role="main">
-		<div class="jumbotron">
-			<div class="container">
-				<% 
-            out.println("<h1 id='bienvenida' class='display-3'> Hola, " + dato.getString("alias") + "</h1>");
-          }
-          conexion.close();
-        %>
-				<p>¿Qué te apetece plantar hoy?</p>
-				<span>
-					<a id="button" class="btn btn-primary btn-lg" style="width:20%;" href="nuevohuerto.jsp?alias=<%=username%>">Nuevo Huerto</a>
-				</span>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-					<%
-          Class.forName("com.mysql.jdbc.Driver");
-          Connection conexion2 = DriverManager.getConnection("jdbc:mysql://localhost:3306/planticas","root", "");
-          Statement s2 = conexion2.createStatement();
-          
-          ResultSet huertos = s2.executeQuery("SELECT * FROM huerto H JOIN usuario U ON (U.idUsuario=H.idUsuario) WHERE alias ='" + username + "' ");
-
-          while (huertos.next()) {  
-            int hid = huertos.getInt("idHuerto");
-            String h = huertos.getString("nomHuerto");
-          %>
-            <div class="col-md-4">
-              <div class="card mb-4" style="width: 18rem;">
-                <div class="card-img-top img-huerto" alt="Imagen del huerto"></div>
-						  <div class="card-body">
-						    <h5 class="card-title"><%=h%></h5>
-						    <a style="width:50%" id="button" class="btn" href="huerto.jsp?idHuerto=<%=hid%>&alias=<%= request.getParameter("alias")%>">Ir al huerto</a>
-		  				</div>
-						</div>
-					</div>
-					<%
-          }
-          conexion2.close();
-        %>
-		</div>
-	</main>
-</body>
-</html>
+        <main role="main">
+           <div class="jumbotron">
+                <div class="container mt-4">
+                    <h2>¿Puedo plantar lo que quiera?</h2>
+                    <p>Ahora mismo, la base de datos que almacena los cultivos que se pueden plantar en 
+                        <span style="font-family: 'Grand Hotel'; font-size: 1.8em;">Planticas</span>  solo puede ser modificada por la administradora. </p>
+                    <p>En un futuro, se implementará la opción de que los usuarios
+                    añadan nuevos cultivos (previa revisión) para poder llevar un control más completo del huerto.</p>
+                </div>
+               <div class="container mt-4">
+                   <h3>¿Qué cultivos hay disponibles actualmente?</h3>
+                   <p>Actualmente, puedes plantar los siguientes cultivos</p>
+               </div>
+            </div>
+        </main>
+  <%
+    }
+    conexion.close();
+  %>
